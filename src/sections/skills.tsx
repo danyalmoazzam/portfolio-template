@@ -6,8 +6,6 @@ import nextjsIcon from "@/assets/icons/next-js.png";
 import vueIcon from "@/assets/icons/vue.png";
 import typescriptIcon from "@/assets/icons/typescript.png";
 import javascriptIcon from "@/assets/icons/javascript.png";
-import pythonIcon from "@/assets/icons/python.png";
-import javaIcon from "@/assets/icons/java.png";
 import html5Icon from "@/assets/icons/html5.png";
 import tailwindcssIcon from "@/assets/icons/tailwindcss.png";
 import shadcnuiIcon from "@/assets/icons/shadcn-ui.png";
@@ -15,23 +13,17 @@ import pnpmIcon from "@/assets/icons/pnpm.png";
 import viteIcon from "@/assets/icons/vite.png";
 import prettierIcon from "@/assets/icons/prettier.png";
 import nodejsIcon from "@/assets/icons/nodejs.png";
-import nestjsIcon from "@/assets/icons/nest-js.png";
-import expressjsIcon from "@/assets/icons/express-js.png";
-import prismaIcon from "@/assets/icons/prisma.png";
 import postgresIcon from "@/assets/icons/postgres.png";
 import dockerIcon from "@/assets/icons/docker.png";
 import gitIcon from "@/assets/icons/git.png";
 import ubuntuIcon from "@/assets/icons/ubuntu.svg";
-import macosIcon from "@/assets/icons/macos.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
 import arcIcon from "@/assets/icons/arc.png";
-import warpIcon from "@/assets/icons/warp.webp";
 import postmanIcon from "@/assets/icons/postman.svg";
-import davinciResolveIcon from "@/assets/icons/davinci-resolve.png";
 import lightroomIcon from "@/assets/icons/lightroom.png";
-import ExpoIcon from "@/assets/icons/expo.png";
 import githubActionsIcon from "@/assets/icons/github-actions.png";
-import trpcIcon from "@/assets/icons/trpc.svg";
+import { motion } from "framer-motion";
+
 export default function skills() {
   const data = [
     {
@@ -49,10 +41,7 @@ export default function skills() {
           name: "Vue.js",
           icon: vueIcon,
         },
-        {
-          name: "tRPC",
-          icon: trpcIcon,
-        },
+
         {
           name: "TypeScript",
           icon: typescriptIcon,
@@ -92,21 +81,10 @@ export default function skills() {
       title: "Backend Development",
       skills: [
         {
-          name: "Nest.js",
-          icon: nestjsIcon,
-        },
-        {
-          name: "Express.js",
-          icon: expressjsIcon,
-        },
-        {
           name: "Node.js",
           icon: nodejsIcon,
         },
-        {
-          name: "Prisma ORM",
-          icon: prismaIcon,
-        },
+
         {
           name: "PostgreSQL",
           icon: postgresIcon,
@@ -119,10 +97,6 @@ export default function skills() {
         {
           name: "React Native",
           icon: reactIcon,
-        },
-        {
-          name: "Expo",
-          icon: ExpoIcon,
         },
       ],
     },
@@ -158,23 +132,11 @@ export default function skills() {
           name: "JavaScript",
           icon: javascriptIcon,
         },
-        {
-          name: "Python",
-          icon: pythonIcon,
-        },
-        {
-          name: "Java",
-          icon: javaIcon,
-        },
       ],
     },
     {
       title: "Tools & Environment",
       skills: [
-        {
-          name: "macOS",
-          icon: macosIcon,
-        },
         {
           name: "VS Code",
           icon: vscodeIcon,
@@ -183,10 +145,7 @@ export default function skills() {
           name: "Arc",
           icon: arcIcon,
         },
-        {
-          name: "Warp Terminal",
-          icon: warpIcon,
-        },
+
         {
           name: "Postman",
           icon: postmanIcon,
@@ -197,10 +156,6 @@ export default function skills() {
       title: "Visual",
       skills: [
         {
-          name: "DaVinci Resolve",
-          icon: davinciResolveIcon,
-        },
-        {
           name: "Lightroom",
           icon: lightroomIcon,
         },
@@ -209,12 +164,17 @@ export default function skills() {
   ];
 
   return (
-    <section
+    <motion.section
       id="skills"
-      className="flex w-full flex-col items-center text-center"
+      className="mt-8 flex w-full flex-col items-center text-center"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
     >
       <MotionDiv>
-        <h2 className="mb-4">My Skills</h2>
+        <h2 className=" my-8 text-6xl tracking-tight underline decoration-purple-500 underline-offset-4">
+          My Skills
+        </h2>
       </MotionDiv>
       <div className="flex flex-wrap justify-center">
         {data.map((item, index) => (
@@ -230,7 +190,7 @@ export default function skills() {
           </MotionDiv>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

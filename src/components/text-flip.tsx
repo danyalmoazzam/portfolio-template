@@ -12,7 +12,7 @@ export default function TextFlip() {
 
   useEffect(() => {
     if (tallestRef.current) {
-      let maxHeight = 0;
+      let maxHeight = 2;
 
       words.forEach((word) => {
         const span = document.createElement("span");
@@ -32,13 +32,13 @@ export default function TextFlip() {
   }, [words]);
 
   return (
-    <div className="box-content flex  gap-2 text-3xl font-semibold ">
-      <p className="text-pretty text-sm tracking-tight text-foreground/80 md:text-3xl">
+    <div className="box-content flex flex-col gap-2 text-xl font-semibold md:flex-row md:gap-2 md:text-3xl">
+      <p className="text-pretty text-2xl tracking-tight text-foreground/80 md:text-3xl">
         Crafting seamless web solutions with{" "}
       </p>
       <div
         ref={tallestRef}
-        className="ml-2 flex flex-col overflow-hidden  text-center font-mono tracking-tight text-purple-700 dark:text-purple-800"
+        className="ml-0 flex flex-col overflow-hidden text-center  font-mono tracking-tight text-purple-700 dark:text-purple-200 md:ml-2"
       >
         {words.map((word, index) => (
           <span key={index} className="animate-flip-words">

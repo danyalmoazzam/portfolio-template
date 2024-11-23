@@ -1,13 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/timeline";
+import { motion } from "framer-motion";
 
 export function WorkExperience() {
   const data = [
     {
       title: "2024 - Present",
       content: (
-        <div className="rounded-lg  border-2 border-muted-foreground/50 p-4 shadow-md">
+        <motion.div
+          className="rounded-lg border-2 border-muted-foreground/50 p-4 shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-lg font-bold text-foreground">
             Laravel Developer
           </h3>
@@ -47,13 +53,18 @@ export function WorkExperience() {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
           </div>
-        </div>
+        </motion.div>
       ),
     },
     {
       title: "2021 - 2024",
       content: (
-        <div className="rounded-lg  border-2 border-muted-foreground/50 p-4 shadow-md">
+        <motion.div
+          className="rounded-lg border-2 border-muted-foreground/50 p-4 shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-lg font-bold text-foreground">
             Laravel Developer
           </h3>
@@ -93,13 +104,18 @@ export function WorkExperience() {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
           </div>
-        </div>
+        </motion.div>
       ),
     },
     {
       title: "2019 - 2021",
       content: (
-        <div className="rounded-lg  border-2 border-muted-foreground/50 p-4 shadow-md">
+        <motion.div
+          className="rounded-lg border-2 border-muted-foreground/50 p-4 shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-lg font-bold text-foreground">
             Front End Developer
           </h3>
@@ -144,7 +160,7 @@ export function WorkExperience() {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
           </div>
-        </div>
+        </motion.div>
       ),
     },
   ];

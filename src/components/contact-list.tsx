@@ -1,11 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faInstagram,
-  faGithub,
-  faTiktok,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import MotionList from "./motion-list";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,33 +20,20 @@ const contacts: Contact[] = [
   {
     name: "Email",
     className: "bg-foreground",
-    href: "mailto:abdulbaqi.dev@gmail.com",
+    href: "mailto:abdulbaqi77ab@gmail.com",
     icon: faEnvelope,
-  },
-
-  {
-    name: "X",
-    className: "bg-foreground",
-    href: "https://x.com/abdulbaqi_dev",
-    icon: faXTwitter,
   },
   {
     name: "Github",
     className: "bg-foreground",
-    href: "https://github.com/abdulbaqi-dev",
+    href: "https://github.com/AbdulBaqi47",
     icon: faGithub,
   },
   {
-    name: "Instagram",
+    name: "LinkedIn",
     className: "bg-foreground",
-    href: "https://instagram.com/abdulbaqi_dev/",
-    icon: faInstagram,
-  },
-  {
-    name: "TikTok",
-    className: "bg-foreground",
-    href: "https://tiktok.com/@abdulbaqi_dev",
-    icon: faTiktok,
+    href: "https://linkedin.com/in/abdul-baqi-28b45a212",
+    icon: faLinkedin,
   },
 ];
 export default function ContactList({

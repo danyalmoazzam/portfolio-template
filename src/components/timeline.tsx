@@ -35,10 +35,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="mb-32 w-full bg-background md:px-10" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-4 py-20 text-center md:px-8 lg:px-10">
-        <h2 className="mx-auto mb-4 max-w-4xl text-lg text-foreground md:text-6xl">
+        <h2 className="mx-auto mb-4 max-w-4xl text-5xl font-bold tracking-tight text-foreground md:text-6xl">
           My Work Experience
         </h2>
-        <p className="m mx-auto text-sm text-muted-foreground md:text-2xl">
+        <p className="m mx-auto text-xs text-muted-foreground md:text-2xl">
           This is my work experience. Below you will find detailed information
           about my roles, responsibilities, and achievements in various
           positions I have held over the years.
@@ -47,10 +47,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
       <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
         {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 md:gap-10 md:pt-40"
-          >
+          <div key={index} className=" flex justify-start pt-10 md:gap-10">
             <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
               <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-black md:left-3">
                 <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
@@ -79,7 +76,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] rounded-full bg-gradient-to-t from-purple-500 from-[0%] via-blue-500 via-[10%] to-transparent"
+            className="absolute inset-x-0 top-0  w-[2px] rounded-full bg-gradient-to-t from-purple-500 from-[0%] via-indigo-500 via-[10%] to-transparent"
           />
         </div>
       </div>

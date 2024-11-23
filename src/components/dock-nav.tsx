@@ -66,17 +66,17 @@ const DATA = {
     social: {
       email: {
         name: "Send Email",
-        url: "mailto:abdulbaqi@gmail.com",
+        url: "mailto:abdulbaqi77ab@gmail.com",
         icon: Icons.email,
       },
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/abdulbaqi",
+        url: "https://github.com/AbdulBaqi47",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/abdulbaqi/",
+        url: "https://www.linkedin.com/in/abdul-baqi-28b45a212",
         icon: Icons.linkedin,
       },
     },

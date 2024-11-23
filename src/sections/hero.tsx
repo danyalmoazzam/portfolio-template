@@ -7,25 +7,32 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ScrollBaseAnimation from "@/components/text-marquee";
 import TextFlip from "@/components/text-flip";
-import { Liquid } from "@/components/gradient-button";
-const goldenSignature = localFont({
-  src: "../assets/GoldenSignature.otf",
-  display: "swap",
-});
+import { motion } from "framer-motion";
 
 export default function hero() {
   return (
     <>
       <div className="absolute inset-x-0 top-0 h-full w-full">
         <h1 className="mt-4 text-center font-mono text-xs tracking-tight opacity-30">
-          <MotionDiv delayOffset={0.8}>Abdul Baqi | Portfolio</MotionDiv>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 0.8,
+            }}
+          >
+            Abdul Baqi | Portfolio
+          </motion.div>
         </h1>
       </div>
       <div className="fixed bottom-7 left-0 right-0 z-50 ">
         <DockNav />
       </div>
-      <section className="-mt-14 flex min-h-screen flex-col items-center justify-center 2xl:-mt-20 2xl:scale-[1.3]">
-        {/* <div className="absolute inset-x-0 bottom-0 h-full w-full">
+      <section className="-mt-24 flex min-h-screen flex-col items-center justify-center md:-mt-14 2xl:-mt-20 2xl:scale-[1.3]">
+        <div className="absolute inset-x-0 bottom-0 h-full w-full">
           <Sparkles
             density={700}
             speed={1.2}
@@ -35,29 +42,62 @@ export default function hero() {
             color="#505050"
             className="absolute inset-x-0 bottom-0 h-full w-full"
           />
-        </div> */}
-
-        <div className="my-5 overflow-hidden rounded-full transition-all duration-500 hover:scale-110">
-          <MotionDiv>
+        </div>
+        <div className="my-5 scale-110 cursor-pointer overflow-hidden rounded-full transition-all duration-500 hover:scale-105 md:scale-100">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          >
             <Image
               src={"/abdulbaqi.png"}
               alt="animoji"
               width={170}
               height={170}
             />
-          </MotionDiv>
+          </motion.div>
         </div>
-        <h1 className="text-center text-[2rem] tracking-tight md:text-[4rem]">
-          <MotionDiv delayOffset={0.8}>Hi I'm Abdul Baqi 👋</MotionDiv>
+        <h1 className="text-center text-[2.2rem] tracking-tight md:text-[4rem]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 0.8,
+            }}
+          >
+            Hi I'm Abdul Baqi 👋
+          </motion.div>
         </h1>
 
         <div className="my-1 flex w-full flex-col gap-2 text-center  tracking-tight lg:w-[60%]">
-          <MotionDiv delayOffset={1.0}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 1.0,
+            }}
+          >
             <TextFlip />
-          </MotionDiv>
-          <MotionDiv delayOffset={1.2} className="mt-5 px-10">
-            <Link href="/CV.pdf" target="_blank" download>
-              <div className="group relative z-40 w-32 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-2 text-center  font-semibold text-foreground">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 1.2,
+            }}
+            className="mt-5 flex justify-center px-10"
+          >
+            <Link href="/CV.pdf" target="_blank" download data-type="cv">
+              <div className="group relative z-40 w-28 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-1 text-center font-semibold text-foreground  md:w-32 md:p-2">
                 <span className="inline-block translate-y-0 transition-all duration-300 group-hover:-translate-y-12 group-hover:opacity-0">
                   View CV
                 </span>
@@ -66,21 +106,9 @@ export default function hero() {
                 </div>
               </div>
             </Link>
-          </MotionDiv>
+          </motion.div>
         </div>
       </section>
-      <MotionDiv
-        delayOffset={1.4}
-        className="absolute left-0 top-[23rem] grid h-[500px] place-content-center lg:top-[28.5rem] 2xl:top-[40rem] "
-      >
-        <ScrollBaseAnimation
-          delay={20}
-          baseVelocity={3}
-          clasname="font-semibold tracking-tight text-9xl text-foreground/80 2xl:text-9xl z-10"
-        >
-          Elevate your business with a website that stands out
-        </ScrollBaseAnimation>
-      </MotionDiv>
     </>
   );
 }
