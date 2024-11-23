@@ -10,13 +10,13 @@ import Footer from "@/components/Footer";
 const outfit = Outfit({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Abdul Baqi | Portfolio",
-  metadataBase: new URL("https://abdulbaqi.vercel.app"),
+  metadataBase: new URL("https://abdulbaqi-port.vercel.app"),
   alternates: {
     canonical: "/",
   },
   authors: [
-    { name: "Abdul Baqi", url: "https://github.com/abdulbaqi-dev" },
-    { name: "Abdul Baqi", url: "https://github.com/abdulbaqi-dev" },
+    { name: "Abdul Baqi", url: "https://github.com/AbdulBaqi47" },
+    { name: "Abdul Baqi", url: "https://github.com/AbdulBaqi47" },
   ],
   description: "Abdul Baqi's personal portfolio website",
   openGraph: {
