@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Abdul Baqi's personal portfolio website",
     images: [
       {
-        url: "/abdulbaqi.jpeg",
+        url: "/abdulbaqi.png",
         alt: "Abdul Baqi's Portrait",
         width: 640,
         height: 800,
