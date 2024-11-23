@@ -48,7 +48,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </main>
-        <div className="hidden md:block">
+        <div className="block md:hidden">
           <BackToTop />
         </div>
         <Footer />
