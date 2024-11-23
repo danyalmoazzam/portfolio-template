@@ -172,7 +172,7 @@ export default function skills() {
       transition={{ type: "spring", stiffness: 100, damping: 10 }}
     >
       <MotionDiv>
-        <h2 className=" my-8 text-6xl tracking-tight underline decoration-purple-500 underline-offset-4">
+        <h2 className=" my-8 mb-28 text-6xl tracking-tight underline decoration-purple-500 underline-offset-4">
           My Skills
         </h2>
       </MotionDiv>

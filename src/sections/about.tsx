@@ -4,7 +4,7 @@ export default function about() {
   return (
     <section
       id="about"
-      className="lg mx-auto mb-16 mt-60 flex min-h-screen flex-col items-center justify-center gap-10 px-2 md:mb-0 md:mt-36 md:max-w-full lg:scale-125 lg:flex-row lg:gap-16"
+      className="lg mx-auto mb-16 mt-60 flex min-h-screen flex-col items-center justify-center gap-10 px-2 md:mb-0 md:mt-36 md:max-w-full lg:scale-125 lg:flex-row lg:gap-16 2xl:scale-150"
     >
       <div className="order-2 text-center lg:order-1 lg:w-2/3">
         <motion.div

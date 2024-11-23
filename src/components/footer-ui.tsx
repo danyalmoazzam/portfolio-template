@@ -105,7 +105,7 @@ const MainFooter = () => {
           <div className="w-full justify-between md:flex">
             <div>
               <h1 className="text-2xl font-semibold md:text-4xl">
-                Let&lsquo;s do great work together
+                Let&rsquo;s do great work together
               </h1>
               <div className="md:w-99 pb-6 pt-2  ">
                 <p className="py-4 pt-10 text-2xl  tracking-tight md:text-3xl">

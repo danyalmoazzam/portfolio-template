@@ -16,7 +16,7 @@ export default function Home() {
       <>
         <Hero />
         <motion.div
-          className="absolute left-0 top-[39rem] h-[500px] w-full border-t-2 border-t-purple-500"
+          className="absolute left-0 top-[39rem] h-[500px] w-full border-t-2 border-t-purple-500 2xl:top-[62rem]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -38,7 +38,7 @@ export default function BackToTop() {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="fixed bottom-5 right-5 z-50 rounded-full shadow-lg"
+      className="fixed md:bottom-5 md:right-9 top-3 right-[calc(50%-14.5rem)] z-50 rounded-full shadow-lg md:shadow-none"
     >
       <TooltipProvider delayDuration={100}>
         <Tooltip>
@@ -50,14 +50,14 @@ export default function BackToTop() {
                   behavior: "smooth",
                 });
               }}
-              className="h-11 w-11 rounded-full bg-background p-0 text-foreground hover:bg-foreground hover:text-background"
-              aria-label="Press to return to top"
+              className="h-7 w-7 md:w-11 md:h-11 rounded-full bg-background p-0 text-foreground hover:bg-purple-500 shadow-sm dark:hover:text-foreground hover:text-background"
+              aria-label="Press to return to top "
             >
               <ChevronUp />
             </Button>
           </TooltipTrigger>
-          <TooltipContent sideOffset={6}>
-            <p>Return</p>
+          <TooltipContent sideOffset={8} >
+            <p >Return to top</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

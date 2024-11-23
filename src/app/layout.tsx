@@ -41,16 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        {/* <Header /> */}
-        {/* <GridBackground /> */}
+        <GridBackground />
         <main className="container overflow-x-hidden border-b-2 border-b-purple-500 selection:bg-purple-500/30 lg:px-28">
           <ThemeProvider attribute="class" defaultTheme="dark">
             {children}
           </ThemeProvider>
         </main>
-        <div className="block md:hidden">
           <BackToTop />
-        </div>
         <Footer />
       </body>
     </html>

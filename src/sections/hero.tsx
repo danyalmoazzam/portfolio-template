@@ -97,7 +97,7 @@ export default function hero() {
             className="mt-5 flex justify-center px-10"
           >
             <Link href="/CV.pdf" target="_blank" download data-type="cv">
-              <div className="group relative z-40 w-28 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-1 text-center font-semibold text-foreground  md:w-32 md:p-2">
+              <div className="group relative w-28 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-1 text-center font-semibold text-foreground  md:w-32 md:p-2 z-50">
                 <span className="inline-block translate-y-0 transition-all duration-300 group-hover:-translate-y-12 group-hover:opacity-0">
                   View CV
                 </span>
