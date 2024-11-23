@@ -32,7 +32,7 @@ export default function hero() {
         <DockNav />
       </div>
       <section className="-mt-24 flex min-h-screen flex-col items-center justify-center md:-mt-14 2xl:-mt-20 2xl:scale-[1.3]">
-        <div className="absolute inset-x-0 bottom-0 h-full w-full">
+        <div className="absolute inset-x-0 bottom-0 h-full w-full -z-50">
           <Sparkles
             density={700}
             speed={1.2}
