@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Header from "@/components/header";
 import BackToTop from "@/components/back-to-top";
-import GridBackground from "@/components/grid-background";
+// import GridBackground from "@/components/grid-background";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
 
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <GridBackground />
+{/*         <GridBackground /> */}
         <main className="container overflow-x-hidden border-b-2 border-b-purple-500 selection:bg-purple-500/30 lg:px-28">
           <ThemeProvider attribute="class" defaultTheme="dark">
             {children}
