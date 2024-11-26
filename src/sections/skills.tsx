@@ -22,7 +22,11 @@ import arcIcon from "@/assets/icons/arc.png";
 import postmanIcon from "@/assets/icons/postman.svg";
 import lightroomIcon from "@/assets/icons/lightroom.png";
 import githubActionsIcon from "@/assets/icons/github-actions.png";
+import php from "@/assets/icons/php.png"; // Import PHP icon from public folder
+import laravel from "@/assets/icons/laravel.png";
+import inertia from "@/assets/icons/inertia.png";
 import { motion } from "framer-motion";
+import React from "react";
 
 export default function skills() {
   const data = [
@@ -30,18 +34,33 @@ export default function skills() {
       title: "Web Development",
       skills: [
         {
-          name: "React.js",
-          icon: reactIcon,
+          name: "PHP",
+          icon: php,
         },
         {
-          name: "Next.js",
-          icon: nextjsIcon,
+          name: "Laravel",
+          icon: laravel,
+        },
+        {
+          name: "Inertia.js",
+          icon: inertia,
         },
         {
           name: "Vue.js",
           icon: vueIcon,
         },
-
+        {
+          name: "React.js",
+          icon: reactIcon,
+        },
+        {
+          name: "Vite",
+          icon: viteIcon,
+        },
+        {
+          name: "Next.js",
+          icon: nextjsIcon,
+        },
         {
           name: "TypeScript",
           icon: typescriptIcon,
@@ -58,22 +77,9 @@ export default function skills() {
           name: "Tailwind CSS",
           icon: tailwindcssIcon,
         },
-
         {
           name: "shadcn/ui",
           icon: shadcnuiIcon,
-        },
-        {
-          name: "PNPM",
-          icon: pnpmIcon,
-        },
-        {
-          name: "Vite",
-          icon: viteIcon,
-        },
-        {
-          name: "Prettier",
-          icon: prettierIcon,
         },
       ],
     },
@@ -84,7 +90,10 @@ export default function skills() {
           name: "Node.js",
           icon: nodejsIcon,
         },
-
+        {
+          name: "PHP",
+          icon: php,
+        },
         {
           name: "PostgreSQL",
           icon: postgresIcon,
@@ -145,7 +154,6 @@ export default function skills() {
           name: "Arc",
           icon: arcIcon,
         },
-
         {
           name: "Postman",
           icon: postmanIcon,
@@ -180,7 +188,7 @@ export default function skills() {
         {data.map((item, index) => (
           <MotionDiv key={index}>
             <div className="mb-6 md:px-2">
-              <h3>{item.title}</h3>
+              <h3 className="my-2 text-2xl font-semibold">{item.title}</h3>
               <MotionList className="flex flex-wrap justify-evenly gap-0 md:gap-5 md:px-6 lg:justify-center">
                 {item.skills.map((skill) => (
                   <SkillCard key={skill.name} {...skill} />
@@ -194,12 +202,23 @@ export default function skills() {
   );
 }
 
-function SkillCard({ icon, name }: { icon: string; name: string }) {
+function SkillCard({ icon, name }: { icon: any; name: string }) {
   return (
     <div className="group rounded-xl border-none p-5 text-center shadow-none transition-all duration-200 ease-linear hover:scale-110 hover:drop-shadow-xl">
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-16 w-16 items-center justify-center">
-          <Image src={icon} alt={name} priority />
+          {React.isValidElement(icon) ? (
+            icon
+          ) : (
+            <Image
+              src={icon}
+              alt={name}
+              width={64}
+              height={64}
+              priority
+              className={name === "Next.js" ? "dark:invert" : ""}
+            />
+          )}
         </div>
         <p>{name}</p>
       </div>

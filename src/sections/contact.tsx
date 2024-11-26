@@ -12,8 +12,9 @@ export default function contact() {
       </MotionDiv>
       <MotionDiv>
         <p>
-          If you are interested in working together, please don't hesitate to
-          get in touch with me.
+          Want to chat? Just shoot me a dm with a direct question on instagram{" "}
+          <br />
+          and I'll respond whenever I can. I will ignore all soliciting.
         </p>
       </MotionDiv>
       <ContactList />

@@ -98,28 +98,28 @@ const MainFooter = () => {
       </Toast.Provider> */}
 
       <div
-        className="relative min-h-screen bg-background pt-8 text-foreground selection:bg-purple-500/30 sm:pt-14"
+        className="relative min-h-screen bg-background py-8 text-foreground  selection:bg-purple-500/30 md:py-10 "
         ref={container}
       >
-        <div className="mx-auto  px-4 sm:container">
+        <div className="mx-auto px-4 sm:container">
           <div className="w-full justify-between md:flex">
             <div>
-              <h1 className="text-2xl font-semibold md:text-4xl">
-                Let&rsquo;s do great work together
+              <h1 className="text-2xl font-bold  tracking-tight md:text-5xl">
+                Let&rsquo;s do great work together.
               </h1>
-              <div className="md:w-99 pb-6 pt-2  ">
-                <p className="py-4 pt-10 text-2xl  tracking-tight md:text-3xl">
+              <div className="md:w-99 pb-6 ">
+                <p className="py-4 pt-8 text-2xl  tracking-tight md:text-3xl">
                   Connect with me
                 </p>
-                <div className="  overflow-hidden rounded-full border-2  border-background  md:text-2xl">
+                <div className="track  overflow-hidden rounded-full border-background tracking-tight md:text-2xl">
                   <form
                     onSubmit={(e) => handleNewsLetterData(e)}
-                    className="z-2 relative grid h-full  w-full grid-cols-6"
+                    className="relative grid h-full   w-full grid-cols-6"
                   >
                     <input
                       type="email"
                       name="newsletter_email"
-                      className="active:ring-none focus:ring-none col-span-5  border-none bg-transparent px-6  py-3"
+                      className="active:ring-none focus:ring-none col-span-5 border-none bg-transparent   px-6 py-3 focus-within:border-none  active:border-none"
                       placeholder="Your Email"
                     />{" "}
                     <button
@@ -146,61 +146,85 @@ const MainFooter = () => {
                 </div>
               </div>
             </div>
-            <div className="mb-5 flex gap-10 md:mb-0">
-              <ul>
-                <li className="pb-2 text-2xl font-semibold text-black">
+            <div className="mb-10 flex gap-10 md:mb-2 ">
+              <ul className="mt-2 space-y-1  md:space-y-2">
+                <li className="pt-8 text-2xl font-semibold text-foreground">
                   SITEMAP
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <Link href="/">Home</Link>
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <Link href="/about">About us</Link>
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <Link href="/services">My Services</Link>
                 </li>
 
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <Link href="/projects">Projects</Link>
                 </li>
               </ul>
-              <ul>
-                <li className="pb-2 text-2xl font-semibold text-black">
+              <ul className="mt-2 space-y-1  md:space-y-2 ">
+                <li className="pt-8 text-2xl font-semibold text-foreground">
                   SOCIAL
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <a
                     href="https://www.linkedin.com/company/next-codez/"
                     target="_blank"
-                    className="underline"
+                    className=""
                   >
                     LinkedIn
                   </a>
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <a
                     href="https://twitter.com/NextCodez"
                     target="_blank"
-                    className="underline"
+                    className=""
                   >
                     Twitter
                   </a>
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <a
                     href="https://www.instagram.com/nextcodez/"
                     target="_blank"
-                    className="underline"
+                    className=""
                   >
                     Instagram
                   </a>
                 </li>
-                <li className="text-xl font-medium">
+                <li
+                  className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative text-xl font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+                >
                   <a
                     href="https://www.facebook.com/nextcodezz"
                     target="_blank"
-                    className="underline"
+                    className=""
                   >
                     Facebook
                   </a>
@@ -208,14 +232,17 @@ const MainFooter = () => {
               </ul>
             </div>
           </div>
-          <div className="flex h-80 items-center justify-center border-y-2 border-purple-500 dark:border-purple-100 md:py-5">
+          <div className="flex h-44 items-center justify-center border-y-2 border-purple-500 dark:border-purple-100 md:h-[21rem] md:py-5">
             <LetterPullUp />
           </div>
           <div className="flex flex-col-reverse justify-between gap-3 py-2 md:flex-row">
-            <span className="font-medium">
+            <span
+              className="after:ease-[cubic-bezier(0.65_0.05_0.36_1)] relative font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 
+      after:bg-neutral-800 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white"
+            >
               &copy; 2025 AbdulBaqi. All Rights Reserved.
             </span>
-            <a href="#" className="font-semibold">
+            <a href="#" className="font-semibold tracking-tight">
               Privacy Policy
             </a>
           </div>

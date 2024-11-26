@@ -1,14 +1,12 @@
 import MotionDiv from "@/components/motion-div";
 import Image from "next/image";
-import localFont from "next/font/local";
 import { DockNav } from "@/components/dock-nav";
-import { Sparkles } from "@/components/sparkles";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ScrollBaseAnimation from "@/components/text-marquee";
 import TextFlip from "@/components/text-flip";
 import { motion } from "framer-motion";
-
+import { cn } from "@/lib/utils";
+import DotPattern from "@/components/backgrounds/dots";
+import { Highlight } from "@/components/hero-highlight";
 export default function hero() {
   return (
     <>
@@ -21,43 +19,30 @@ export default function hero() {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 0.8,
+              delay: 0.5,
             }}
           >
             Abdul Baqi | Portfolio
           </motion.div>
         </h1>
       </div>
-      <div className="fixed bottom-7 left-0 right-0 z-50 ">
-        <DockNav />
-      </div>
+      <motion.div>
+        <MotionDiv className="fixed bottom-7 left-0 right-0 z-50 ">
+          <DockNav />
+        </MotionDiv>
+        <DotPattern
+          width={20}
+          height={20}
+          cx={1.5}
+          cy={1.5}
+          cr={1.5}
+          className={cn(
+            "-z-10 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]",
+          )}
+        />
+      </motion.div>
       <section className="-mt-24 flex min-h-screen flex-col items-center justify-center md:-mt-14 2xl:-mt-20 2xl:scale-[1.3]">
-        <div className="absolute inset-x-0 bottom-0 h-full w-full -z-50">
-          <Sparkles
-            density={700}
-            speed={1.2}
-            size={1.1}
-            direction="bottom"
-            opacitySpeed={2}
-            color="#505050"
-            className="absolute inset-x-0 bottom-0 h-full w-full"
-          />
-        </div>
         <div className="my-5 scale-110 cursor-pointer overflow-hidden rounded-full transition-all duration-500 hover:scale-105 md:scale-100">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          >
-            <Image
-              src={"/abdulbaqi.png"}
-              alt="animoji"
-              width={170}
-              height={170}
-            />
-          </motion.div>
-        </div>
-        <h1 className="text-center text-[2.2rem] tracking-tight md:text-[4rem]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +53,27 @@ export default function hero() {
               delay: 0.8,
             }}
           >
-            Hi I'm Abdul Baqi 👋
+            <Image
+              src={"/abdulbaqi.png"}
+              alt="animoji"
+              width={170}
+              height={170}
+            />
+          </motion.div>
+        </div>
+
+        <h1 className="z-10 text-center text-[1.9rem] tracking-tight md:text-[4rem]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 10,
+              delay: 1,
+            }}
+          >
+            Hi I'm <Highlight>Abdul Baqi</Highlight> 👋
           </motion.div>
         </h1>
 
@@ -80,7 +85,7 @@ export default function hero() {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 1.0,
+              delay: 1.2,
             }}
           >
             <TextFlip />
@@ -92,12 +97,17 @@ export default function hero() {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 1.2,
+              delay: 1.5,
             }}
             className="mt-5 flex justify-center px-10"
           >
-            <Link href="/CV.pdf" target="_blank" download data-type="cv">
-              <div className="group relative w-28 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-1 text-center font-semibold text-foreground  md:w-32 md:p-2 z-50">
+            <Link
+              href="https://drive.google.com/file/d/16bbL7fnVouBbtAnuAf6zNj_VPD6oupbi/view?usp=sharing"
+              target="_blank"
+              download
+              data-type="cv"
+            >
+              <div className="group relative z-50 w-28 scale-125 cursor-pointer overflow-hidden rounded-full border-2 bg-background p-1 text-center font-semibold  text-foreground md:w-32 md:p-2">
                 <span className="inline-block translate-y-0 transition-all duration-300 group-hover:-translate-y-12 group-hover:opacity-0">
                   View CV
                 </span>

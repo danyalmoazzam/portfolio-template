@@ -28,10 +28,10 @@ export default function Home() {
         >
           <ScrollBaseAnimation
             delay={20}
-            baseVelocity={3}
-            clasname="font-semibold tracking-tight text-7xl md:text-9xl text-foreground/80 2xl:text-9xl z-10"
+            baseVelocity={-3} // Reversed x direction by making baseVelocity negative
+            clasname="font-semibold tracking-tight text-7xl md:text-9xl text-foreground/90 2xl:text-9xl z-10"
           >
-            Elevate your business with a website that stands out
+            - Elevate your business with a website that stands out
           </ScrollBaseAnimation>
         </MotionDiv>
         <motion.div
@@ -43,7 +43,7 @@ export default function Home() {
         <About />
 
         <motion.div
-          className="border-y-2 border-y-purple-500/60"
+          className="mt-6 border-y-2 border-y-purple-500/60 md:mt-28"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -7,7 +7,7 @@ export default function Footer() {
       className="relative min-h-screen"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed bottom-4 2xl:-bottom-32 min-h-screen w-full ">
+      <div className="fixed -bottom-3 min-h-screen w-full 2xl:-bottom-32 ">
         <MainFooter />
       </div>
     </div>

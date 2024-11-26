@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <div className="grid h-screen place-content-center bg-background px-4">
@@ -20,12 +23,14 @@ export default function NotFound() {
             </g>
           </g>
         </svg>
-
-        <h1 className="mt-6 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Uh-oh!
-        </h1>
-
-        <p className="mt-4 text-muted-foreground">We can't find that page.</p>
+        <span className="flex flex-col space-y-3">
+          <h1 className="mt-6 text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Page Coming Soon!{" "}
+          </h1>
+          <Button>
+            <Link href={"/"}>Back to Home!</Link>
+          </Button>
+        </span>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ interface ParallaxProps {
 
 export default function ScrollBaseAnimation({
   children,
-  baseVelocity = -5,
+  baseVelocity = 5,
   clasname,
   scrollDependent = false, // Default to false
   delay = 0, // Default delay is 0 (no delay)
@@ -59,9 +59,9 @@ export default function ScrollBaseAnimation({
     // Reverse direction if scrollDependent is true
     if (scrollDependent) {
       if (velocityFactor.get() < 0) {
-        directionFactor.current = -1;
-      } else if (velocityFactor.get() > 0) {
         directionFactor.current = 1;
+      } else if (velocityFactor.get() > 0) {
+        directionFactor.current = -1;
       }
     }
 
