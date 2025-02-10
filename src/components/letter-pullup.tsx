@@ -42,7 +42,7 @@ export function LetterPullUp() {
           className={clsx(
             "text-center font-light drop-shadow-sm",
             "text-[7rem] md:text-5xl md:text-[20rem]",
-            "tracking-normal",
+            "select-none tracking-normal",
             "md:leading-[4rem] lg:leading-[4.5rem] xl:leading-[5rem]",
             goldenSignature.className, // Use GoldenSignature font
           )}

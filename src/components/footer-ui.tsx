@@ -98,11 +98,11 @@ const MainFooter = () => {
       </Toast.Provider> */}
 
       <div
-        className="relative min-h-screen bg-background py-8 text-foreground  selection:bg-purple-500/30 md:py-10 "
+        className="relative min-h-screen bg-background   py-8 text-foreground  selection:bg-purple-500/30 md:py-10 "
         ref={container}
       >
-        <div className="mx-auto px-4 sm:container">
-          <div className="w-full justify-between md:flex">
+        <div className="mx-auto px-4 sm:container ">
+          <div className="w-full justify-between md:flex md:pt-4 xl:pt-0">
             <div>
               <h1 className="text-2xl font-bold  tracking-tight md:text-5xl">
                 Let&rsquo;s do great work together.

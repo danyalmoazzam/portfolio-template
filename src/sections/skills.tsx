@@ -41,10 +41,10 @@ export default function skills() {
           name: "Laravel",
           icon: laravel,
         },
-        {
-          name: "Inertia.js",
-          icon: inertia,
-        },
+        // {
+        //   name: "Inertia.js",
+        //   icon: inertia,
+        // },
         {
           name: "Vue.js",
           icon: vueIcon,
@@ -53,14 +53,14 @@ export default function skills() {
           name: "React.js",
           icon: reactIcon,
         },
-        {
-          name: "Vite",
-          icon: viteIcon,
-        },
-        {
-          name: "Next.js",
-          icon: nextjsIcon,
-        },
+        // {
+        //   name: "Vite",
+        //   icon: viteIcon,
+        // },
+        // {
+        //   name: "Next.js",
+        //   icon: nextjsIcon,
+        // },
         {
           name: "TypeScript",
           icon: typescriptIcon,
@@ -77,19 +77,19 @@ export default function skills() {
           name: "Tailwind CSS",
           icon: tailwindcssIcon,
         },
-        {
-          name: "shadcn/ui",
-          icon: shadcnuiIcon,
-        },
+        // {
+        //   name: "shadcn/ui",
+        //   icon: shadcnuiIcon,
+        // },
       ],
     },
     {
       title: "Backend Development",
       skills: [
-        {
-          name: "Node.js",
-          icon: nodejsIcon,
-        },
+        // {
+        //   name: "Node.js",
+        //   icon: nodejsIcon,
+        // },
         {
           name: "PHP",
           icon: php,
@@ -100,15 +100,15 @@ export default function skills() {
         },
       ],
     },
-    {
-      title: "Mobile Development",
-      skills: [
-        {
-          name: "React Native",
-          icon: reactIcon,
-        },
-      ],
-    },
+    // {
+    //   title: "Mobile Development",
+    //   skills: [
+    //     {
+    //       name: "React Native",
+    //       icon: reactIcon,
+    //     },
+    //   ],
+    // },
     {
       title: "DevOps",
       skills: [
@@ -120,10 +120,10 @@ export default function skills() {
           name: "GitHub Actions",
           icon: githubActionsIcon,
         },
-        {
-          name: "Docker",
-          icon: dockerIcon,
-        },
+        // {
+        //   name: "Docker",
+        //   icon: dockerIcon,
+        // },
         {
           name: "Ubuntu",
           icon: ubuntuIcon,
